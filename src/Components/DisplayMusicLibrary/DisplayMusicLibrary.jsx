@@ -12,7 +12,7 @@ const DisplayMusicLibrary = (props) => {
             </tr>
             </thead>
             <tbody>
-            {songs.map((song) => {
+            {props.parentSongs.map((song) => {
             return (
             <tr>
                 <td>{song.title}</td>
@@ -28,4 +28,4 @@ const DisplayMusicLibrary = (props) => {
     );
 }
  
-export default DisplayMusicLibrary;props
+export default DisplayMusicLibrary;

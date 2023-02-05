@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div>
-      <DisplayMusicLibrary />
+      <DisplayMusicLibrary parentSongs={songs}/>
     </div>
   );
 }
