@@ -11,22 +11,23 @@ const AddSongForm = (props) => {
     const [release_date, setRelease_Date] = useState('');
     const [genre, setGenre] = useState();
 
-    function handleSubmit(event) {
+    const handleSubmit =async(event) =>{
         event.preventDefault();
-        axios.post('http://127.0.0.1:8000/api/music/', {
-            title,
-            artist,
-            album,
-            release_date,
-            genre
+        let response = await axios.post('http://127.0.0.1:8000/api/music/', {
+            title: title,
+            artist: artist,
+            album: album,
+            release_date: release_date,
+            genre: genre
         });
+        console.log(response)
         console.log(event);
         props.getAllSongs(); 
     }
 
 
     return ( 
-        <form onSubmit={handleSubmit} className='form-grid'>
+        <form onSubmit={e=>handleSubmit(e)} className='form-grid'>
             <h2>what's your New favorite Song?</h2>
             <div className='form-group'>
                 <label>Title</label>
