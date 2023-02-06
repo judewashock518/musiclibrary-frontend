@@ -21,7 +21,7 @@ const AddSongForm = (props) => {
             genre
         });
         console.log(event);
-        props.addNewSongProperty(event);
+        props.getAllSongs();
     }
 
 
