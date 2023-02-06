@@ -1,0 +1,10 @@
+.border-box {
+    border: 1px;
+    border-radius:2rem;
+    border-style: solid;
+    border-color:indigo;
+    background-color:rgb(88, 121, 142);
+    margin: 1rem;
+    padding:1rem;
+    box-shadow:10rem 5rem 5rem teal;
+}
