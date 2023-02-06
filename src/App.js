@@ -28,7 +28,7 @@ function App() {
         <NavBar />
         <div className='col-md-6'>
           <div className='border-box'>
-        <DisplayMusicLibrary parentSongs={songs}/>
+        <DisplayMusicLibrary parentSongs={songs} getAllSongs={getAllSongs}/>
           </div>
         </div>
         <div className='col-md-6'>

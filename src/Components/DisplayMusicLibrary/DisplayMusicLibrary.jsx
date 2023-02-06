@@ -1,8 +1,16 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
+import React from 'react';
+import axios from 'axios';
 
 
 const DisplayMusicLibrary = (props) => {
+
+    const DeleteSong = async(id) => {
+    
+        const response = await axios.delete(`http://127.0.0.1:8000/api/music/${id}/`)
+        console.log(response.data);
+        props.getAllSongs();
+    }
+
     return ( 
         <table className = 'table'>
             <thead>
@@ -24,7 +32,8 @@ const DisplayMusicLibrary = (props) => {
                 <td>{song.album}</td>
                 <td>{song.release_date}</td>
                 <td>{song.genre}</td> 
-                <button type="button" class="btn btn-primary" style={{'margin-left': '1rem'}}>Delete</button>
+                <button type="button" class="btn btn-primary" 
+                style={{'margin-left': '1rem'}} onClick={() => DeleteSong(song.id)}>Delete</button>
             </tr>
             );
         })}
