@@ -28,12 +28,6 @@ function App() {
 
   }
 
-  function addNewSong(song){
-    let tempSongs = [...songs, song];
-
-    setSongs(tempSongs);
-  }
-
   return (
     <div className='container-fluid'>
       <div className='row'>
@@ -45,12 +39,12 @@ function App() {
         </div>
         <div className='col-md-6'>
           <div className ='border-box'>
-        <AddSongForm addNewSongProperty={addNewSong} />
+        <AddSongForm getAllSongs={getAllSongs}/>
           </div>
         </div>
         <div className='col-md-6'>
           <div className ='border-box'>
-            <SearchBar />
+            <SearchBar setSongs={setSongs} parentSongs={songs}/>
           </div>
         </div>
       </div>
