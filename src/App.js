@@ -29,6 +29,7 @@ function App() {
   }
 
   return (
+    <body className = 'background-image'>
     <div className='container-fluid'>
       <div className='row'>
         <NavBar />
@@ -45,10 +46,14 @@ function App() {
         <div className='col-md-6'>
           <div className ='border-box'>
             <SearchBar setSongs={setSongs} parentSongs={songs}/>
+            <button type='secondary' 
+            class='btn btn-secondary' style={{'margin-top': '1rem'}} 
+            onClick={() => getAllSongs()}> Get All Songs </button>
           </div>
         </div>
       </div>
     </div>
+    </body>
   );
 }
 
