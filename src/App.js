@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import DisplayMusicLibrary from './Components/DisplayMusicLibrary/DisplayMusicLibrary';
 import AddSongForm from './Components/AddSongForm/AddSongForm';
+import NavBar from './Components/NavBar/NavBar';
+import SearchBar from './Components/SearchBar/SearchBar';
 import './App.css';
 import axios from 'axios';
 
@@ -35,7 +37,7 @@ function App() {
   return (
     <div className='container-fluid'>
       <div className='row'>
-        <h3 style={{margin: '1rem'}}>music Library</h3>
+        <NavBar />
         <div className='col-md-6'>
           <div className='border-box'>
         <DisplayMusicLibrary parentSongs={songs}/>
@@ -44,6 +46,11 @@ function App() {
         <div className='col-md-6'>
           <div className ='border-box'>
         <AddSongForm addNewSongProperty={addNewSong} />
+          </div>
+        </div>
+        <div className='col-md-6'>
+          <div className ='border-box'>
+            <SearchBar />
           </div>
         </div>
       </div>

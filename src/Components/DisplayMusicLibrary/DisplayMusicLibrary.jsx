@@ -3,6 +3,7 @@ const DisplayMusicLibrary = (props) => {
     return ( 
         <table className = 'table'>
             <thead>
+            <h2>your Playlist</h2>
             <tr>
                 <th>Title</th>
                 <th>Artist</th>
@@ -20,6 +21,7 @@ const DisplayMusicLibrary = (props) => {
                 <td>{song.album}</td>
                 <td>{song.release_date}</td>
                 <td>{song.genre}</td> 
+                <button type="button" class="btn btn-primary" style={{'margin-left': '1rem'}}>Delete</button>
             </tr>
             );
         })}

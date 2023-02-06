@@ -1,0 +1,23 @@
+.nav_flex_box1 {
+    display: flex;
+    justify-content:space-between;
+    background-color:teal;
+}
+
+.social_header {
+    display:flex;
+    justify-content:flex-end;
+}
+
+.text_muted {
+    color:antiquewhite;
+}
+
+.nav_items {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:whitesmoke;
+    text-decoration: none;
+    display: inline;
+    margin-right: 1rem;
+    padding-top: 1rem;
+}

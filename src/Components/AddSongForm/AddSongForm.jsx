@@ -27,6 +27,7 @@ const AddSongForm = (props) => {
 
     return ( 
         <form onSubmit={handleSubmit} className='form-grid'>
+            <h2>what's your New favorite Song?</h2>
             <div className='form-group'>
                 <label>Title</label>
                 <input type='text' className='form-control' value={title} onChange={(event) => setTitle(event.target.value)} />
